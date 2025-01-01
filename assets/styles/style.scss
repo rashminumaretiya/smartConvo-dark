@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 @import "../../assets/bootstrap/scss/functions";
 @import "../../assets/bootstrap/scss/variables";
-@import url('../styles/fonts.css');
+@import url("../styles/fonts.css");
 $Geist: "Geist", serif;
-$primary: #7544FF;
+$primary: #7544ff;
 $secondary: transparent;
 $white: #ffffff;
-$white-100: #CEC1F180;
-$white-200: #E5E7EB;
-$dark: #0C0E19;
+$white-100: #cec1f180;
+$white-200: #e5e7eb;
+$white-300: #cec1f1;
+$dark: #0c0e19;
+$sf-regular: "SF-Pro-regular";
+$sf-medium: "SF-Pro-medium";
+$sf-bold: "SF-Pro-medium";
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -23,8 +27,13 @@ body {
   line-height: 1.7;
   color: $white-100;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'SF-Pro-regular';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SF-Pro-regular";
 }
 h1 {
   font-size: 72px;
@@ -73,8 +82,10 @@ a {
   &.btn-primary {
     background-color: $primary;
     color: $white;
-    box-shadow: 0px 1px 1px 0px #FFFFFF80 inset,0px 6px 12px 0px #FFFFFF26 inset,0px 1px 2px 0px #08080833,0px 4px 4px 0px #08080814;
-  
+    box-shadow: 0px 1px 1px 0px #ffffff80 inset,
+      0px 6px 12px 0px #ffffff26 inset, 0px 1px 2px 0px #08080833,
+      0px 4px 4px 0px #08080814;
+
     &:hover {
       background-color: $primary;
       color: $white;
@@ -91,24 +102,64 @@ a {
   &.btn-secondary {
     background-color: $secondary;
     color: $white;
-  
+
     &:hover {
       background-color: $white;
       color: $secondary;
     }
   }
-  
+
   &.btn-light {
     background-color: $white;
     color: $secondary;
   }
 }
 
+.text-gradient {
+  background: linear-gradient(90deg, #cec1f1 0%, #ffbfff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .lg-heading {
   font-size: 50px;
   font-weight: 500;
-  line-height: 64.5px;
+  line-height: 1.19;
   color: $secondary;
+}
+
+.chip {
+  padding: 10px 19.5px;
+  font-size: 14px;
+  line-height: 1.22;
+  background-color: rgba($primary, 0.1);
+  color: $white-300;
+  width: fit-content;
+  border-radius: 12px;
+  position: relative;
+  margin: 0 auto 10px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      141.84deg,
+      #9de8ee 6%,
+      #fa7c0b 49.11%,
+      #7544ff 90.53%
+    );
+    border-radius: 12px;
+    z-index: -1;
+    padding: 1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
 }
 
 //header start
@@ -117,10 +168,10 @@ header {
   .navbar {
     padding: 20px 0;
     .navbar-toggler-icon {
-      
     }
     .navbar-nav {
-      box-shadow: 0px 1px 2px 0px #08080833, 0px 4px 4px 0px #08080814, 0px 1px 1px 0px #FFFFFF33 inset, 0px 6px 12px 0px #FFFFFF1F inset;
+      box-shadow: 0px 1px 2px 0px #08080833, 0px 4px 4px 0px #08080814,
+        0px 1px 1px 0px #ffffff33 inset, 0px 6px 12px 0px #ffffff1f inset;
       padding: 6px 20px;
       border-radius: 20px;
       .nav-item {
@@ -131,7 +182,7 @@ header {
           &.dropdown-toggle {
             &:after {
               border: 0;
-              background-image: url('../images/svg/arrowDown.svg');
+              background-image: url("../images/svg/arrowDown.svg");
               vertical-align: 2px;
               width: 9px;
               height: 5px;
@@ -150,6 +201,88 @@ header {
             visibility: visible;
           }
         }
+      }
+    }
+  }
+}
+
+// FAQ
+.faq-section{
+  .lg-heading{
+    margin-bottom: 20px;
+  }
+}
+
+// Footer Style
+footer {
+  padding: 40px 0;
+  border-top: 1px solid;
+  border-image-slice: 1;
+  background: radial-gradient(
+    64.28% 96.62% at 54.76% 105%,
+    rgba(117, 68, 255, 0.5) 0%,
+    rgba(12, 14, 25, 0.332609) 55.8%,
+    #0c0e19 100%
+  );
+  backdrop-filter: blur(15px);
+  & .email {
+    color: $white-300;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 14px;
+  }
+  .social-links {
+    display: flex;
+    gap: 6px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width: 36px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        background: linear-gradient(
+          136.71deg,
+          $primary -26.6%,
+          rgba(54, 53, 103, 0.2) 51.03%
+        );
+      }
+      &:hover {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .list {
+    h6 {
+      color: $white-300;
+      margin-bottom: 18px;
+      font-family: $sf-medium;
+    }
+    li {
+      margin-bottom: 10px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      color: rgba($white-300, 0.7);
+      font-size: 16px;
+      line-height: 1.5;
+      display: block;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $white-300;
       }
     }
   }
