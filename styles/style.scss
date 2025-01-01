@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+$Geist: "Geist", serif;
+$primary: #7544FF;
+$white: #ffffff;
+$dark: #0C0E19;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+);
+
+@import "../bootstrap/scss/bootstrap";
+
+
+body {
+  font-family: $Geist;
+  background-color: $dark;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  font-family: $Geist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.container {
+  max-width: 1400px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $primary;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $secondary;
+  }
+}
+
+.btn-light {
+  background-color: $white;
+  color: $secondary;
+}
+
+.bg-header {
+  background-color: #ffffffc1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 10px -10px #00000034;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, $primary 10%, #ffae00 91.55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-two {
+  background: linear-gradient(90deg, $primary 0%, #ffae00 138.55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-three {
+  background: linear-gradient(90deg, #a6a050 -7.22%, #ff9721 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lg-heading {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 64.5px;
+  color: $secondary;
+}
+
+.yellow-text {
+  font-size: 20px;
+  line-height: 24.34px;
+  font-family: "Caveat", cursive;
+  color: $yellow;
+}
+
+.blue-text {
+  color: $primary;
+}
+.btn-text {
+  color: $primary;
+  padding: 0;
+  padding-right: 18px;
+  position: relative;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  svg {
+    position: absolute;
+    top: 55%;
+    right: 4px;
+    transform: translateY(-50%);
+    height: 11px;
+    width: 7px;
+  }
+  &:hover {
+    color: rgba($primary, 0.8);
+    svg {
+      stroke: rgba($primary, 0.8);
+    }
+  }
+}
+
+.text {
+  font-size: 16px;
+  color: rgba($secondary, 0.5);
+  line-height: 23.52px;
+  font-weight: 500;
+  font-family: $Inter;
+}
+
+//header start
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  .contact-side {
+    .btn {
+      min-width: 132px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+  }
+
+  .navbar-nav {
+    margin-top: 24px;
+    gap: 25px;
+    margin-left: 30px;
+  }
+
+  .nav-item {
+    .nav-link {
+      color: $dark-blue;
+      font-family: Inter;
+      font-weight: 500;
+      line-height: 19.36px;
+      letter-spacing: 0.05em;
+      padding: 8px 0 !important;
+    }
+
+    .dropdown-toggle {
+      color: $dark-blue;
+    }
+  }
+}
+
+.dropdown-toggle {
+  &::after {
+    border: none;
+    height: 6px;
+    width: 10px;
+    background: url(../images/svg/down-arrow.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align: 0.055em;
+  }
+}
+
+//header end
+.hero-check {
+  li {
+    font-family: $Inter;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
