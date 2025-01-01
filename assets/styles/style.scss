@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-@import "../bootstrap/scss/functions";
-@import "../bootstrap/scss/variables";
+@import "../../assets/bootstrap/scss/functions";
+@import "../../assets/bootstrap/scss/variables";
+@import url('../styles/fonts.scss');
 $Geist: "Geist", serif;
 $primary: #7544FF;
+$secondary: transparent;
 $white: #ffffff;
 $dark: #0C0E19;
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "light": $light,
 );
 
-@import "../bootstrap/scss/bootstrap";
-
+@import "../../assets/bootstrap/scss/bootstrap";
 
 body {
   font-family: $Geist;
   background-color: $dark;
 }
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SF-Pro-regular';
+}
 ul {
   list-style: none;
   padding: 0;
@@ -95,12 +97,6 @@ img {
   color: $secondary;
 }
 
-.yellow-text {
-  font-size: 20px;
-  line-height: 24.34px;
-  font-family: "Caveat", cursive;
-  color: $yellow;
-}
 
 .blue-text {
   color: $primary;
@@ -134,7 +130,6 @@ img {
   color: rgba($secondary, 0.5);
   line-height: 23.52px;
   font-weight: 500;
-  font-family: $Inter;
 }
 
 //header start
@@ -161,7 +156,6 @@ header {
 
   .nav-item {
     .nav-link {
-      color: $dark-blue;
       font-family: Inter;
       font-weight: 500;
       line-height: 19.36px;
@@ -170,7 +164,6 @@ header {
     }
 
     .dropdown-toggle {
-      color: $dark-blue;
     }
   }
 }
@@ -190,7 +183,6 @@ header {
 //header end
 .hero-check {
   li {
-    font-family: $Inter;
     font-size: 16px;
     font-weight: 500;
   }
