@@ -11417,10 +11417,37 @@ textarea.form-control-lg {
 body {
   font-family: "Geist", serif;
   background-color: #0C0E19;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(206, 193, 241, 0.5019607843);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "SF-Pro-regular";
+}
+
+h1, .h1 {
+  font-size: 72px;
+}
+
+h2, .h2 {
+  font-size: 50px;
+}
+
+h3, .h3 {
+  font-size: 38px;
+}
+
+h4, .h4 {
+  font-size: 32px;
+}
+
+h5, .h5 {
+  font-size: 26px;
+}
+
+h6, .h6 {
+  font-size: 20px;
 }
 
 ul {
@@ -11442,6 +11469,11 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .btn-primary {

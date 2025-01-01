@@ -6,6 +6,7 @@ $Geist: "Geist", serif;
 $primary: #7544FF;
 $secondary: transparent;
 $white: #ffffff;
+$white-100: #CEC1F180;
 $dark: #0C0E19;
 $theme-colors: (
   "primary": $primary,
@@ -17,9 +18,30 @@ $theme-colors: (
 body {
   font-family: $Geist;
   background-color: $dark;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $white-100;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'SF-Pro-regular';
+}
+h1 {
+  font-size: 72px;
+}
+h2 {
+  font-size: 50px;
+}
+h3 {
+  font-size: 38px;
+}
+h4 {
+  font-size: 32px;
+}
+h5 {
+  font-size: 26px;
+}
+h6 {
+  font-size: 20px;
 }
 ul {
   list-style: none;
@@ -40,7 +62,10 @@ ul {
 img {
   max-width: 100%;
 }
-
+a {
+  text-decoration: none;
+  color: $white;
+}
 .btn-primary {
   background-color: $primary;
   color: $white;
