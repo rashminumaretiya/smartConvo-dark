@@ -24,6 +24,8 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
     infinite: true,
   });
+
+  
 });
 
 	if ($(".scene").length > 0){
@@ -51,7 +53,27 @@ $(document).ready(function () {
     },
   })
 
-
+  var swiper = new Swiper(".ai-platform-slider", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    centeredSlides: true,
+    initialSlide: 2,
+    navigation: {
+      nextEl: ".next-arrow",
+      prevEl: ".prev-arrow",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 6,
+      },
+    },
+  });
 
   const swiper1 = new Swiper('.swiper1', {
     direction: 'vertical',
