@@ -1,10 +1,46 @@
 @import './variables';
 
+@media screen and (min-width: 1599px) {
+  .hero-section{
+    .pink-half {
+      top: 5%;
+    }
+    .purple-half {
+     right: -1%;
+    }
+  }
+}
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1280px;
   }
 }
+@media screen and (max-width: 1199px) {
+  .hero-section{
+    h2{
+      font-size: 52px;
+    }
+    .pink-half {
+      left: -8%;
+    }
+    .purple-half {
+      right: -8%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-section{
+    .pink-half {
+      top: 10%;
+    }
+    .purple-half{
+      top: 26%;
+      right: -9%;
+    }
+  }
+}
+
 @media screen and (min-width: 992px) {
   .dropdown-menu {
     display: block;
@@ -20,10 +56,93 @@
     right: 0;
     background-color: $dark;
   }
+  h2{
+    font-size: 48px;
+  }
+  .hero-section{
+    h2{
+      font-size: 48px;
+    }
+    .pink-half{
+      top: 12%;
+    }
+    .purple-half{
+      top: auto;
+      bottom: 28%;
+    }
+  }
 }
+
+@media screen and (max-width: 767px) {
+  .hero-section{
+    padding: 84px 0 54px;
+    &::before{
+      background: radial-gradient(
+        59.17% 53.97% at 50% 50%,
+        rgba(225, 77, 255, 0.69) 0.05%,
+        rgba(0, 0, 0, 0) 50%
+      );
+    }
+    h2{
+      font-size: 38px;
+      display: inline;
+      -webkit-text-fill-color: #edd2ef;
+    }
+    .video-wrapper {
+      .play-icon {
+        height: 60px;
+        width: 60px;
+        img{
+          width: 40%;
+          margin-right: -7%;
+        }
+      }
+    }
+    .pink-half{
+      width: 50vw;
+      left: -12%;
+      top: 5%;
+    }
+  }
+  h2{
+    font-size: 38px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .btn {
     padding: 10px 14px;
+  }
+  .hero-section{
+    &::before{
+      display: none;
+    }
+    ul{
+      flex-direction: column;
+      align-items: center;
+      li{
+        margin-right: 0;
+      }
+    }
+    .pink-half{
+      width: 65vw;
+      left: -26%;
+      top: 1%;
+    }
+    .pink-half{
+      width: 65vw;
+      right: -14%;
+      bottom: 15%;
+    }
+  }
+  .company-section{
+    padding-bottom: 40px;
+    .company-logo-wrapper{
+      margin: 20px auto 25px;
+      .company-logo{
+        width: 164px;
+      }
+    }
   }
 }
 @media screen and (max-width: 480px) {
@@ -35,5 +154,23 @@
         }
       }
     }
+  }
+}
+@media screen and (max-width: 425px) {
+  h2{
+    font-size: 29px;
+  }
+  .hero-section{
+    h2{
+      font-size: 32px;
+    }
+    .pink-half{
+      top: 5%;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .company-logo{
+    width: 139px;
   }
 }
