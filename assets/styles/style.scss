@@ -69,6 +69,9 @@ a {
   text-decoration: none;
   color: $white;
 }
+.text_primary{
+  color: $primary;
+}
 .btn {
   font-size: 14px;
   padding: 12px 18px;
@@ -718,12 +721,15 @@ header {
       font-family: $sf-medium;
       position: relative;
       border: 0;
+      &:hover, &:focus{
+        isolation: unset !important;
+      }
       span {
         position: relative;
         z-index: 2;
       }
       &.active {
-        background:linear-gradient(135.86deg, #7544FF 5.24%, rgb(0, 0, 0) 51.01%);
+        background:linear-gradient(135.86deg, #7544FF 5.24%, #201A3F 51.01%);
         &::after {
           content: "";
           position: absolute;
@@ -976,9 +982,6 @@ header {
           border-radius: 2px;
           background: linear-gradient(102.59deg, #9DE8EE -0.29%, #FA7C0B 16.69%, #7544FF 33.01%);
         }
-      }
-      &:hover, &:focus{
-        isolation: unset !important;
       }
     }
     .nav-item{
