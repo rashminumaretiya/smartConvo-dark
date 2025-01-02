@@ -2,25 +2,8 @@
 @import "../../assets/bootstrap/scss/functions";
 @import "../../assets/bootstrap/scss/variables";
 @import url("../styles/fonts.css");
-$Geist: "Geist", serif;
-$primary: #7544ff;
-$secondary: transparent;
-$white: #ffffff;
-$white-100: #cec1f180;
-$white-200: #e5e7eb;
-
-$white-300: #cec1f1;
-$dark: #0c0e19;
-$gray: #e5e7eb;
-$sf-regular: "SF-Pro-regular";
-$sf-medium: "SF-Pro-medium";
-$sf-bold: "SF-Pro-bold";
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-);
-
 @import "../../assets/bootstrap/scss/bootstrap";
+@import './variables';
 
 body {
   font-family: $Geist;
@@ -85,9 +68,6 @@ ul {
   font-weight: 500;
   line-height: 16px;
 }
-.container {
-  max-width: 1280px;
-}
 
 img {
   max-width: 100%;
@@ -101,6 +81,7 @@ a {
   padding: 12px 18px;
   &.btn-primary {
     background-color: $primary;
+    border-color: $primary;
     color: $white;
     box-shadow: 0px 1px 1px 0px #ffffff80 inset,
       0px 6px 12px 0px #ffffff26 inset, 0px 1px 2px 0px #08080833,
@@ -227,13 +208,23 @@ a {
 
 //header start
 header {
-  min-height: 44px;
-  @media screen and (max-width: 991px) {
-    min-height: auto;
+  min-height: 85px;
+  &.header-sticky {
+    .navbar {
+      background-color: $dark;
+      box-shadow: 0px 2px 1px 0px rgba(8, 8, 8, 0.2), 3px 4px 4px 0px rgba(8, 8, 8, 0.0784313725), 0px 4px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 0px 10px 0px rgba(255, 255, 255, 0.1215686275) inset;
+    }
   }
   .navbar {
     padding: 20px 0;
-    .navbar-toggler-icon {
+    z-index: 999;
+    .navbar-brand {
+      margin: 0;
+    }
+    .navbar-toggler {
+      color: $white;
+      box-shadow: none;
+      padding: 0;
     }
     .navbar-nav {
       box-shadow: 0px 1px 2px 0px #08080833, 0px 4px 4px 0px #08080814,
@@ -245,6 +236,15 @@ header {
           color: $white-200;
           padding: 5px 15px;
           font-weight: 600;
+          &:hover {
+            color: $primary;
+            &.dropdown-toggle {
+              &:after {
+                background-image: url('../images/svg/arrowDownBlue.svg');
+              }
+            }
+          }
+
           &.dropdown-toggle {
             &:after {
               border: 0;
@@ -253,19 +253,72 @@ header {
               width: 9px;
               height: 5px;
               margin-left: 10px;
+              transition: all 0.3s ease-in-out;
             }
           }
-        }
-        .dropdown-menu {
-          display: block;
-          opacity: 0;
-          visibility: hidden;
         }
         &:hover {
           .dropdown-menu {
             opacity: 1;
             visibility: visible;
           }
+        }
+      }
+    }
+    .header-right {
+      display: flex;
+    }
+  }
+}
+
+// Seamless Integration
+.integrations-section {
+  .seamless-functionality {
+    position: relative;
+    background-image: url('../images/svg/seamless-dotted-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    .seamless-logo {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      max-width: max-content;
+      border-radius: 10px;
+      margin: 0 auto;
+      display: table;
+      &:before {
+        content: "";
+        text-align: center;
+        top: -14px;
+        left: 0;
+        position: absolute;
+        width: 205px;
+        height: 29px;
+        background: radial-gradient(50% 50% at 50% 50%, #FF20B5 0.5%, rgba(0, 0, 0, 0) 100%);
+        background-blend-mode: screen;
+        opacity: 0.5;
+        z-index: 9;
+        right: 0;
+        margin: 0 auto;
+  
+      }
+      .seamless-logo-inner {
+        overflow: hidden;
+        margin: 1px;
+        background-color: $dark;
+        border-radius: 10px;
+        padding: 14px;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(180deg, #7544FF 0%, #A22DBD 29.97%, #7544FF 80.31%, #A22DBD 119.87%);      
+          border-radius: 10px;
+          z-index: -1;
         }
       }
     }

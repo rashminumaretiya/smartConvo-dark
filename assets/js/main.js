@@ -1,10 +1,10 @@
 
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
-  if (scroll >= 60) {
-    $("header").addClass("bg-header");
+  if (scroll >= 20) {
+    $("header").addClass("header-sticky");
   } else {
-    $("header").removeClass("bg-header");
+    $("header").removeClass("header-sticky");
   }
 });
 
@@ -25,3 +25,16 @@ $(document).ready(function () {
     infinite: true,
   });
 });
+
+	if ($(".scene").length > 0){
+		var sceneElements = document.querySelectorAll('.scene');
+		var parallaxScenes = [];
+		for (var i = 0; i < sceneElements.length; i++) {
+		  parallaxScenes.push(new Parallax(sceneElements[i]));
+		}
+		var scene = $(".scene")[0];
+		var parallax = new Parallax(scene, {
+			scalarX: 5,
+			scalarY: 5
+		});
+	}
