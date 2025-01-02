@@ -37,4 +37,63 @@ $(document).ready(function () {
 			scalarX: 5,
 			scalarY: 5
 		});
-	}
+  }
+  
+  var mySwiper = new Swiper ('.testimonial-1', {
+    direction: 'vertical',
+    effect: 'slide',
+    slidesPerView: 3,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        reverseDirection: true,
+        disableOnInteraction: false,
+    },
+  })
+
+
+
+  const swiper1 = new Swiper('.swiper1', {
+    direction: 'vertical',
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      // reverseDirection: true, // Swiper-2 scrolls in reverse
+
+    },
+    speed: 20000, // Smooth scrolling speed
+     allowTouchMove: false,
+  });
+  
+  const swiper2 = new Swiper('.swiper2', {
+    direction: 'vertical',
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true, // Swiper-2 scrolls in reverse
+    },
+    speed: 20000,
+     allowTouchMove: false,
+  });
+  
+  const swiper3 = new Swiper('.swiper3', {
+    direction: 'vertical',
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      // reverseDirection: true, // Swiper-2 scrolls in reverse
+
+    },
+    speed: 20000,
+     allowTouchMove: false,
+  });
+  

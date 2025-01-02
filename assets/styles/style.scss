@@ -3,7 +3,7 @@
 @import "../../assets/bootstrap/scss/variables";
 @import url("../styles/fonts.css");
 @import "../../assets/bootstrap/scss/bootstrap";
-@import './variables';
+@import "./variables";
 
 body {
   font-family: $Geist;
@@ -11,6 +11,7 @@ body {
   font-size: 14px;
   line-height: 1.7;
   color: $white-100;
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -212,7 +213,10 @@ header {
   &.header-sticky {
     .navbar {
       background-color: $dark;
-      box-shadow: 0px 2px 1px 0px rgba(8, 8, 8, 0.2), 3px 4px 4px 0px rgba(8, 8, 8, 0.0784313725), 0px 4px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 0px 10px 0px rgba(255, 255, 255, 0.1215686275) inset;
+      box-shadow: 0px 2px 1px 0px rgba(8, 8, 8, 0.2),
+        3px 4px 4px 0px rgba(8, 8, 8, 0.0784313725),
+        0px 4px 1px 0px rgba(255, 255, 255, 0.2) inset,
+        0px 0px 10px 0px rgba(255, 255, 255, 0.1215686275) inset;
     }
   }
   .navbar {
@@ -240,7 +244,7 @@ header {
             color: $primary;
             &.dropdown-toggle {
               &:after {
-                background-image: url('../images/svg/arrowDownBlue.svg');
+                background-image: url("../images/svg/arrowDownBlue.svg");
               }
             }
           }
@@ -275,7 +279,7 @@ header {
 .integrations-section {
   .seamless-functionality {
     position: relative;
-    background-image: url('../images/svg/seamless-dotted-pattern.svg');
+    background-image: url("../images/svg/seamless-dotted-pattern.svg");
     background-repeat: no-repeat;
     background-position: top center;
     .seamless-logo {
@@ -295,13 +299,16 @@ header {
         position: absolute;
         width: 205px;
         height: 29px;
-        background: radial-gradient(50% 50% at 50% 50%, #FF20B5 0.5%, rgba(0, 0, 0, 0) 100%);
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          #ff20b5 0.5%,
+          rgba(0, 0, 0, 0) 100%
+        );
         background-blend-mode: screen;
         opacity: 0.5;
         z-index: 9;
         right: 0;
         margin: 0 auto;
-  
       }
       .seamless-logo-inner {
         overflow: hidden;
@@ -316,7 +323,13 @@ header {
           left: 0;
           right: 0;
           bottom: 0;
-          background: linear-gradient(180deg, #7544FF 0%, #A22DBD 29.97%, #7544FF 80.31%, #A22DBD 119.87%);      
+          background: linear-gradient(
+            180deg,
+            #7544ff 0%,
+            #a22dbd 29.97%,
+            #7544ff 80.31%,
+            #a22dbd 119.87%
+          );
           border-radius: 10px;
           z-index: -1;
         }
@@ -773,6 +786,7 @@ header {
       padding: 20px 15px 20px 24px;
       position: relative;
       z-index: 2;
+      font-family: $sf-medium;
       &::after {
         height: 36px;
         width: 36px;
@@ -802,6 +816,7 @@ header {
       span {
         margin-right: 14px;
         display: block;
+        color: $white-300;
       }
     }
     .accordion-body {
@@ -819,6 +834,187 @@ header {
         rgba(12, 14, 25, 0.332609) 55.8%,
         #0c0e19 100%
       );
+    }
+  }
+}
+
+// Tool Action section
+.tool-action-section {
+  padding-top: 70px;
+  .text-gradient{
+    margin-bottom: 10px;
+  }
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    .box-wrap {
+      border-radius: 20px;
+      position: relative;
+      padding: 15px 0;
+      margin-top: 9px;
+     &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(112.19deg, #15192E 1.62%, rgba(68, 59, 122, 0.3) 49.09%, rgba(164, 146, 214, 0.1) 102.8%);
+      border-radius: 15px;
+      padding: 1px;
+      z-index: -1;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+     }
+    }
+  }
+}
+
+// Benifit Section
+.benefit-section {
+  padding-top: 70px;
+  .benefit-wrapper {
+    background-image: url("../images/png/benefit-bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+  }
+  .first-row {
+    max-width: 1150px;
+    margin: 35px auto 0;
+  }
+  .second-row {
+    max-width: 1575px;
+    margin: 45px auto 0;
+    .chart {
+      transform: scale(1.25) translateY(-28px);
+    }
+    .bg {
+      position: absolute;
+      mix-blend-mode: hard-light;
+      transform: scale(2);
+      left: 0;
+      top: -30px;
+      z-index: -1;
+    }
+  }
+  .single-benefit {
+    text-align: center;
+    .image-wrap {
+      margin-bottom: 12px;
+      height: 43px;
+      width: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+    h6 {
+      font-family: $sf-medium;
+      margin-bottom: 10px;
+      color: $white-300;
+    }
+    p {
+      color: rgba($white-300, 0.7);
+      opacity: 0.8;
+    }
+  }
+}
+
+// Testimonial Styles
+.testimonial-main {
+  padding-top: 70px;
+  position: relative;
+  .bg-shape {
+    position: absolute;
+    bottom: 0;
+  }
+  .wrapper {
+    margin: 0 60px;
+    .testimonial-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      position: relative;
+      margin-top: 12px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        background: linear-gradient(
+          180deg,
+          #0c0e19 6.99%,
+          rgba(12, 14, 25, 0) 100%
+        );
+        height: 75px;
+        z-index: 10;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background: linear-gradient(
+          0deg,
+          #0c0e19 6.99%,
+          rgba(12, 14, 25, 0) 100%
+        );
+        height: 75px;
+        z-index: 10;
+      }
+    }
+    .swiper {
+      width: calc(33.33% - 50px);
+      height: 450px;
+      overflow: hidden;
+      .swiper-slide {
+        height: auto; /* Allow content-based height */
+        min-height: 80px; /* Minimum height for consistent visuals */
+        .single-review {
+          .person-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            img {
+              height: 42px;
+              min-width: 42px;
+              border-radius: 50%;
+              object-fit: cover;
+              background: linear-gradient(
+                112.19deg,
+                #15192e 1.62%,
+                rgba(68, 59, 122, 0.3) 49.09%,
+                rgba(164, 146, 214, 0.1) 102.8%
+              );
+            }
+            .name-box {
+              p {
+                color: $white-300;
+                font-size: 18px;
+                line-height: 1.19;
+                font-family: $sf-medium;
+                margin-bottom: 4px;
+              }
+              span {
+                color: rgba($white-300, 0.7);
+                font-size: 14px;
+                line-height: 1.3;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+    .btn-primary {
+      width: fit-content;
+      margin-top: 10px;
     }
   }
 }
@@ -889,6 +1085,10 @@ header {
   padding-bottom: 70px;
   .lg-heading {
     margin-bottom: 20px;
+  }
+  .tab-content {
+    max-width: 1060px;
+    margin: 0 auto;
   }
 }
 
