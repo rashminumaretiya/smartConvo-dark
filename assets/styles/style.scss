@@ -832,6 +832,25 @@ header {
     }
   }
 }
+.blue-gradient{
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 991px;
+    background: radial-gradient($primary, transparent 80%);
+    left: -120px;
+    top: -60px;
+    height: 260px;
+    background: radial-gradient(21.31% 30.78% at 50% 50%, #4100C4 0.5%, rgba(0, 0, 0, 0) 100%);
+    background-blend-mode: screen;
+    mix-blend-mode: screen;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+}
 
 // Why choose us section
 .why-use-section{
@@ -853,6 +872,7 @@ header {
   border-radius: 15px;
   position: relative;
   z-index: 3;
+  height: 100%;
   .small-grill{
     position: absolute;
     top: 10px;
@@ -867,6 +887,35 @@ header {
   }
   .big-img{
     max-height: 355px;
+  }
+  &.pink{
+    &::before{
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 29.64%;
+      top: -42px;
+      height: 87px;
+      background: radial-gradient(50% 50% at 36% 50%, #ff20b5be 0.5%, rgba(0, 0, 0, 0) 70%);
+      background-blend-mode: screen;
+      mix-blend-mode: plus-lighter;
+      opacity: 0.5;
+    }
+  }
+  &.blue{
+    &::before{
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 29.64%;
+      bottom: -48px;
+      height: 87px;
+      background: radial-gradient(50% 50% at 36% 50%, rgba($primary, 0.8) 0.5%, rgba(0, 0, 0, 0) 70%);
+      background-blend-mode: screen;
+      mix-blend-mode: plus-lighter;
+      opacity: 0.5;
+      z-index: 2;
+    }
   }
 }
 
@@ -927,7 +976,7 @@ header {
     height: auto;
     position: absolute;
     bottom: 12%;
-    left: 2%;
+    left: 0;
     transform: rotate(180deg);
   }
   .nav{
@@ -966,13 +1015,14 @@ header {
         width: 100%;
         max-width: 78px;
         z-index: -1;
+        opacity: 0.5;
       }
       span{
         margin-left: 4px;
         line-height: normal;
       }
       &.active{
-        background: linear-gradient(135.86deg, #7544FF 5.24%, #201A40 51.01%);
+        background: linear-gradient(159deg, #7544FF 3.24%, #201A40 39.01%);
         img{
           mix-blend-mode: color-dodge;
         }

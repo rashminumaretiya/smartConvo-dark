@@ -1,12 +1,17 @@
 @import './variables';
 
-@media screen and (min-width: 1599px) {
+@media screen and (max-width: 1599px) {
   .hero-section{
     .pink-half {
       top: 5%;
     }
     .purple-half {
      right: -1%;
+    }
+  }
+  .how-works-section{
+    .purple-small-half{
+      left: -6vw;
     }
   }
 }
@@ -25,6 +30,11 @@
     }
     .purple-half {
       right: -8%;
+    }
+  }
+  .blue-gradient{
+    &::before{
+      left: -25%;
     }
   }
 }
@@ -71,6 +81,49 @@
       bottom: 28%;
     }
   }
+  .use-card{
+    padding: 30px 30px 0;
+    &.blue{
+      &::before{
+        bottom: unset;
+        top: -47px;
+        left: unset;
+        right: 0;
+        width: 100%;
+        max-width: 370px;
+      }
+    }
+  }
+  .how-works-section{
+    .purple-small-half{
+      max-width: 10vw;    
+      bottom: -8vw;
+      left: -22vw;
+    }
+    .nav-tabs{
+      .nav-link{
+        &::before{
+          max-width: 29px;
+        }
+      } 
+    } 
+    .nav{
+      max-width: 767px;
+      min-width: 767px;
+    }
+  }
+  .security-card{
+    &.bordered{
+      &::after, &::before{
+        left: 50%;
+      }
+      &.one{
+        &::after, &::before{
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -107,6 +160,27 @@
   h2{
     font-size: 38px;
   }
+  .how-works-section{
+    .purple-small-half{
+      max-width: 30vw;
+      bottom: -18vw;
+      left: -7vw;
+    }
+  }
+  .security-card{
+    &.bordered{
+      &::after, &::before{
+       display: none
+      }
+    }
+  }
+  .blue-gradient{
+    &::before{
+      height: 140px;
+      top: 0px;
+    }
+  }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -143,6 +217,27 @@
         width: 164px;
       }
     }
+  }
+  h5 {
+    font-size: 20px;
+  }
+  .use-card{
+    .head{
+      img{
+        max-height: 45px;
+        max-height: 30px;
+      }
+    }
+  }
+  .how-works-section{
+    .purple-small-half{
+      max-width: 37vw;
+      bottom: -6vw;
+      left: -17vw;
+    }
+  }
+  .security-card{
+    padding: 16px 0;
   }
 }
 @media screen and (max-width: 480px) {
