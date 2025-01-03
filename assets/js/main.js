@@ -54,7 +54,7 @@ $(document).ready(function () {
   })
 
   var swiper = new Swiper(".ai-platform-slider", {
-    slidesPerView: 4,
+    slidesPerView: 6,
     spaceBetween: 20,
     centeredSlides: true,
     initialSlide: 2,
@@ -63,13 +63,22 @@ $(document).ready(function () {
       prevEl: ".prev-arrow",
     },
     breakpoints: {
-      640: {
+      0: {
+        slidesPerView: 1.5,
+      },
+      600: {
         slidesPerView: 2,
       },
-      768: {
+      991: {
+        slidesPerView: 3,
+      },
+      1199: {
         slidesPerView: 4,
       },
-      1024: {
+      1500: {
+        slidesPerView: 5,
+      },
+      1700: {
         slidesPerView: 6,
       },
     },
