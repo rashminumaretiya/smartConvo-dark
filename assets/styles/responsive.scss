@@ -201,6 +201,9 @@
     .seamless-functionality {
       .seamless-logo {
         top: 50px;
+        &:before {
+          width: 105px;
+        }
         .seamless-logo-inner {
           img {
             max-width: 150px;
@@ -524,6 +527,16 @@
   }
   .use-card{
     padding: 22px 22px 0;
+  }
+  .integrations-section {
+    .seamless-functionality {
+      .seamless-logo {
+        top: 17%;
+        .seamless-logo-inner {
+          padding: 7px;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 425px) {
