@@ -1281,6 +1281,7 @@ header {
       position: relative;
       z-index: 2;
       font-family: $sf-medium;
+      gap: 5px;
       &::after {
         height: 36px;
         width: 36px;
@@ -1475,6 +1476,7 @@ header {
       gap: 20px;
       position: relative;
       margin-top: 12px;
+      pointer-events: none;
       &::before {
         content: "";
         position: absolute;

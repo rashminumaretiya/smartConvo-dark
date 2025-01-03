@@ -88,15 +88,22 @@ $(document).ready(function () {
     direction: 'vertical',
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 40,
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
-      // reverseDirection: true, // Swiper-2 scrolls in reverse
-
     },
-    speed: 20000, // Smooth scrolling speed
-     allowTouchMove: false,
+    speed: 20000,
+     breakpoints: {
+      0: {
+        spaceBetween: 20,
+       },
+       767: {
+         spaceBetween: 30,
+       },
+       1199: {
+         spaceBetween: 40,
+       }
+    },
   });
   
   const swiper2 = new Swiper('.swiper2', {
@@ -107,10 +114,20 @@ $(document).ready(function () {
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
-      reverseDirection: true, // Swiper-2 scrolls in reverse
+      reverseDirection: true,
     },
     speed: 20000,
-     allowTouchMove: false,
+    breakpoints: {
+      0: {
+        spaceBetween: 20,
+       },
+       767: {
+         spaceBetween: 30,
+       },
+       1199: {
+         spaceBetween: 40,
+       }
+    },
   });
   
   const swiper3 = new Swiper('.swiper3', {
@@ -121,10 +138,18 @@ $(document).ready(function () {
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
-      // reverseDirection: true, // Swiper-2 scrolls in reverse
-
     },
     speed: 20000,
-     allowTouchMove: false,
+    breakpoints: {
+      0: {
+        spaceBetween: 20,
+       },
+       767: {
+         spaceBetween: 30,
+       },
+       1199: {
+         spaceBetween: 40,
+       }
+    },
   });
   
