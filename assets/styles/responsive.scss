@@ -1,7 +1,7 @@
 @import "./variables";
 
 @media screen and (max-width: 1599px) {
-  .hero-section{
+  .hero-section {
     .pink-half {
       top: 5%;
     }
@@ -9,8 +9,8 @@
       right: -1%;
     }
   }
-  .how-works-section{
-    .purple-small-half{
+  .how-works-section {
+    .purple-small-half {
       left: -6vw;
     }
   }
@@ -60,8 +60,8 @@
       }
     }
   }
-  .hero-section{
-    h2{
+  .hero-section {
+    h2 {
       font-size: 52px;
     }
     .pink-half {
@@ -71,8 +71,8 @@
       right: -8%;
     }
   }
-  .blue-gradient{
-    &::before{
+  .blue-gradient {
+    &::before {
       left: -25%;
     }
   }
@@ -134,25 +134,25 @@
     right: 0;
     background-color: $dark;
   }
-  h2{
+  h2 {
     font-size: 48px;
   }
-  .hero-section{
-    h2{
+  .hero-section {
+    h2 {
       font-size: 48px;
     }
-    .pink-half{
+    .pink-half {
       top: 12%;
     }
-    .purple-half{
+    .purple-half {
       top: auto;
       bottom: 28%;
     }
   }
-  .use-card{
+  .use-card {
     padding: 30px 30px 0;
-    &.blue{
-      &::before{
+    &.blue {
+      &::before {
         bottom: unset;
         top: -47px;
         left: unset;
@@ -162,20 +162,20 @@
       }
     }
   }
-  .how-works-section{
-    .purple-small-half{
-      max-width: 10vw;    
+  .how-works-section {
+    .purple-small-half {
+      max-width: 10vw;
       bottom: -8vw;
       left: -22vw;
     }
-    .nav-tabs{
-      .nav-link{
-        &::before{
+    .nav-tabs {
+      .nav-link {
+        &::before {
           max-width: 29px;
         }
-      } 
-    } 
-    .nav{
+      }
+    }
+    .nav {
       max-width: 767px;
       min-width: 767px;
     }
@@ -253,19 +253,27 @@
       height: 550px;
     }
   }
+  .benefit-section {
+    .benefit-wrapper {
+      background-position: center;
+    }
+    .second-row {
+      margin-top: 24px;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .hero-section{
+  .hero-section {
     padding: 84px 0 54px;
-    &::before{
+    &::before {
       background: radial-gradient(
         59.17% 53.97% at 50% 50%,
         rgba(225, 77, 255, 0.69) 0.05%,
         rgba(0, 0, 0, 0) 50%
       );
     }
-    h2{
+    h2 {
       font-size: 38px;
       display: inline;
       -webkit-text-fill-color: #edd2ef;
@@ -274,23 +282,23 @@
       .play-icon {
         height: 60px;
         width: 60px;
-        img{
+        img {
           width: 40%;
           margin-right: -7%;
         }
       }
     }
-    .pink-half{
+    .pink-half {
       width: 50vw;
       left: -12%;
       top: 5%;
     }
   }
-  h2{
+  h2 {
     font-size: 38px;
   }
-  .how-works-section{
-    .purple-small-half{
+  .how-works-section {
+    .purple-small-half {
       max-width: 30vw;
       bottom: -18vw;
       left: -7vw;
@@ -374,33 +382,33 @@
   .btn {
     padding: 10px 14px;
   }
-  .hero-section{
-    &::before{
+  .hero-section {
+    &::before {
       display: none;
     }
-    ul{
+    ul {
       flex-direction: column;
       align-items: center;
-      li{
+      li {
         margin-right: 0;
       }
     }
-    .pink-half{
+    .pink-half {
       width: 65vw;
       left: -26%;
       top: 1%;
     }
-    .pink-half{
+    .pink-half {
       width: 65vw;
       right: -14%;
       bottom: 15%;
     }
   }
-  .company-section{
+  .company-section {
     padding-bottom: 40px;
-    .company-logo-wrapper{
+    .company-logo-wrapper {
       margin: 20px auto 25px;
-      .company-logo{
+      .company-logo {
         width: 164px;
       }
     }
@@ -408,22 +416,22 @@
   h5 {
     font-size: 20px;
   }
-  .use-card{
-    .head{
-      img{
+  .use-card {
+    .head {
+      img {
         max-height: 45px;
         max-height: 30px;
       }
     }
   }
-  .how-works-section{
-    .purple-small-half{
+  .how-works-section {
+    .purple-small-half {
       max-width: 37vw;
       bottom: -6vw;
       left: -17vw;
     }
   }
-  .security-card{
+  .security-card {
     padding: 16px 0;
   }
   .integrations-section {
