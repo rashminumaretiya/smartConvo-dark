@@ -64,7 +64,7 @@ $(document).ready(function () {
     },
     breakpoints: {
       0: {
-        slidesPerView: 1.5,
+        slidesPerView: 1.3,
       },
       600: {
         slidesPerView: 2,

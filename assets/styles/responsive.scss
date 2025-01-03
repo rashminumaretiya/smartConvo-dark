@@ -20,6 +20,14 @@
     max-width: 1280px;
   }
 }
+@media screen and (max-width: 1399px) {
+  .security-section {
+    .circle-animation {
+      width: 750px;
+      height: 750px;
+    }
+  }
+}
 @media screen and (max-width: 1199px) {
   .testimonial-main {
     .wrapper {
@@ -66,6 +74,12 @@
   }
   .purple-half-round2 {
     width: 15vw;
+  }
+  .security-section {
+    .circle-animation {
+      width: 650px;
+      height: 650px;
+    }
   }
 }
 
@@ -204,6 +218,12 @@
       margin-top: 0;
     }
   }
+  .security-section {
+    .circle-animation {
+      width: 550px;
+      height: 550px;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -300,6 +320,16 @@
         top: 25px;
         right: 7%;
       }
+    }
+  }
+  .circle-animation {
+    width: 550px;
+    height: 550px;
+  }
+  .security-section {
+    .circle-animation {
+      width: 450px;
+      height: 450px;
     }
   }
 }
@@ -421,6 +451,16 @@
       }
     }
   }
+  .circle-animation {
+    width: 450px;
+    height: 450px;
+  }
+  .security-section {
+    .circle-animation {
+      width: 350px;
+      height: 350px;
+    }
+  }
 }
 @media screen and (max-width: 480px) {
   h2 {
@@ -439,6 +479,10 @@
     .col-4 {
       width: 50%;
     }
+  }
+  .circle-animation {
+    width: 250px;
+    height: 250px;
   }
 }
 @media screen and (max-width: 425px) {
