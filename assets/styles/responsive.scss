@@ -20,6 +20,22 @@
     max-width: 1280px;
   }
 }
+@media screen and (max-width: 1499px) {
+  .upload-left-img{
+    left: -5%;  
+    max-width: 20vw;
+  }
+  .copilot-left-img{
+    max-width: 20vw;
+  }
+  .chat-copilot-left-img{
+    max-width: 15vw;
+  }
+  .ask-anything-img{
+    max-width: 20vw;
+    right: 0%;
+  }
+}
 @media screen and (max-width: 1399px) {
   .security-section {
     .circle-animation {
@@ -116,6 +132,12 @@
         }
       }
     }
+  }
+  .chat-copilot-left-img{
+    left: -1.5%;
+  }
+  .ask-anything-img{
+    right: -5%;
   }
 }
 
