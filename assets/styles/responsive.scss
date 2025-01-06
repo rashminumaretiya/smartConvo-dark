@@ -14,16 +14,6 @@
       left: -6vw;
     }
   }
-  .running-star{
-    &.effect-2{
-      left: 65%;
-    }
-  }
-  .running-star{
-    &.effect-1{
-      left: 10%;
-    }
-  }
 }
 @media screen and (min-width: 1400px) {
   .container {
@@ -35,12 +25,6 @@
     .circle-animation {
       width: 750px;
       height: 750px;
-    }
-  }
-  .running-star{
-    &.effect-1{
-      left: 5%;
-      top: 65%;
     }
   }
   .benefit-section {
@@ -143,11 +127,6 @@
     .purple-half {
       top: 26%;
       right: -9%;
-    }
-  }
-  .running-star{
-    &.effect-2{
-      left: 72%;
     }
   }
 }
@@ -352,11 +331,6 @@
          display: none
         }
       }
-    }
-  }
-  .running-star{
-    &.effect-2{
-      left: 80%;
     }
   }
   .blue-gradient{
@@ -575,11 +549,6 @@
     width: 250px;
     height: 250px;
   }
-  .running-star{
-    &.effect-2{
-      left: 85%;
-    }
-  }
   .use-card{
     padding: 22px 22px 0;
   }
@@ -608,12 +577,6 @@
       .company-logo {
         width: 133px;
       }
-    }
-  }
-  .running-star{
-    &.effect-1{
-      left: 10%;
-      top: 85%;
     }
   }
 }

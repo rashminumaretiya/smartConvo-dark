@@ -194,12 +194,12 @@ a {
       #9de8ee 6%,
       #fa7c0b 49.11%,
       #7544ff 90.53%
-      );
-      border-radius: 12px;
-      z-index: -1;
-      margin: -1px;
-      background-size: 200% 200%;
-      animation: borderChange 5s linear infinite;
+    );
+    border-radius: 12px;
+    z-index: -1;
+    margin: -1px;
+    background-size: 200% 200%;
+    animation: borderChange 5s linear infinite;
   }
 }
 
@@ -209,7 +209,10 @@ header {
   &.header-sticky {
     .navbar {
       background-color: $dark;
-      box-shadow:0px 2px 1px 0px rgba(8, 8, 8, 0.2), 0px 4px 4px 0px rgba(8, 8, 8, 0.0784313725), 0px 1px 5px 0px rgba(255, 255, 255, 0.2) inset, 0px 0px 10px 0px rgba(255, 255, 255, 0.1215686275) inset;
+      box-shadow: 0px 2px 1px 0px rgba(8, 8, 8, 0.2),
+        0px 4px 4px 0px rgba(8, 8, 8, 0.0784313725),
+        0px 1px 5px 0px rgba(255, 255, 255, 0.2) inset,
+        0px 0px 10px 0px rgba(255, 255, 255, 0.1215686275) inset;
     }
   }
   .navbar {
@@ -285,27 +288,19 @@ header {
 // Seamless Integration
 .running-star {
   position: absolute;
-  left: 15%;
-  top: 40%;
+  top: 0;
+  z-index: -1;
   span {
     height: 84px;
     width: 2px;
     display: block;
-    transform: rotate(225deg);
-    background: linear-gradient(
-      70.77deg,
-      #6224ff -0.29%,
-      #660b89 29.44%,
-      #9284b7 48.5%,
-      #660b89 58.31%,
-      #000000 96.84%
-    );
-    background-blend-mode: screen;
   }
   &.effect-1 {
-    left: 15%;
+    right: 0;
+    top: -75%;
+    animation: star1 6s ease-in-out infinite;
     span {
-      transform: rotate(58deg);
+      transform: rotate(90deg);
       background: linear-gradient(
         70.77deg,
         #6224ff -0.29%,
@@ -318,16 +313,33 @@ header {
     }
   }
   &.effect-2 {
-    left: 60%;
-    top: -20px;
+    right: 50%;
+    top: -40%;
+    animation: star1 7s ease-in-out infinite;
     span {
-      transform: rotate(58deg);
+      transform: rotate(90deg);
       background: linear-gradient(
         70.77deg,
         #6224ff -0.29%,
         #ffffff 24.28%,
         #660b89 42.32%,
         #660b89 68.24%,
+        #000000 96.84%
+      );
+      background-blend-mode: screen;
+    }
+  }
+  &.effect-3 {
+    right: 0;
+    animation: star1 5s ease-in-out infinite;
+    span {
+      transform: rotate(90deg);
+      background: linear-gradient(
+        70.77deg,
+        #6224ff -0.29%,
+        #660b89 29.44%,
+        #9284b7 48.5%,
+        #660b89 58.31%,
         #000000 96.84%
       );
       background-blend-mode: screen;
@@ -418,6 +430,20 @@ header {
         top: 0;
         z-index: 0;
         border-radius: 15px;
+      }
+    }
+    &:nth-child(even) {
+      &:hover {
+        img {
+          transform: rotate(-3deg) scale(1.05);
+        }
+      }
+    }
+    &:nth-child(odd) {
+      &:hover {
+        img {
+          transform: rotate(3deg) scale(1.05);
+        }
       }
     }
     &:nth-child(1n) {
@@ -517,6 +543,7 @@ header {
       opacity: 0.5;
     }
     img {
+      transition: all 0.2s ease-in-out;
       margin-bottom: 20px;
       max-height: 160px;
       margin: 0 auto 10px;
@@ -665,7 +692,7 @@ header {
 // Hero section
 .hero-section {
   position: relative;
-  padding: 134px 0 54px;
+  padding: 100px 0 54px;
   overflow: hidden;
   &::before {
     position: absolute;
@@ -691,7 +718,7 @@ header {
     background: linear-gradient(90deg, #cec1f1 0%, #ffbfff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    span {
+    b {
       -webkit-text-fill-color: $primary;
     }
   }
@@ -768,6 +795,7 @@ header {
         rgba(255, 255, 255, 0.4) 0%,
         rgba(131, 30, 255, 0.4) 100%
       );
+      animation: pulse 2s ease-in-out infinite;
       img {
         margin-right: -10px;
       }
@@ -789,6 +817,8 @@ header {
     top: 1%;
     width: 32vw;
     pointer-events: none;
+    animation: move 5s linear infinite;
+    transform: translateX(25px);
   }
   .purple-half {
     position: absolute;
@@ -796,6 +826,8 @@ header {
     top: 20%;
     width: 40vw;
     pointer-events: none;
+    animation: move 4s linear infinite;
+    transform: translateX(25px);
   }
 }
 // Tbas
@@ -1171,7 +1203,7 @@ header {
       font-size: 22px;
       margin-bottom: 10px;
     }
-    p{
+    p {
       margin-bottom: 0;
     }
     &.bordered {
@@ -1798,5 +1830,109 @@ footer {
   }
   100% {
     background-position: 0 50%;
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes star1 {
+  0% {
+    transform: rotate(315deg) translateX(50px);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-2500px);
+    opacity: 0;
+  }
+}
+
+.cd-headline {
+  &.cd-words-wrapper {
+    // overflow: hidden;
+    vertical-align: top;
+    perspective: 300px;
+    position: relative;
+    display: inline-block;
+  }
+  b {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 50% 100%;
+    opacity: 0;
+    &.is-visible {
+      position: relative;
+      opacity: 1;
+      -webkit-animation: rotate-in 1.2s;
+      -moz-animation: rotate-in 1.2s;
+      animation: rotate-in 1.2s;
+      transform: rotateX(0deg);
+    }
+    &.is-hidden {
+      -webkit-animation: rotate-out 1.2s;
+      -moz-animation: rotate-out 1.2s;
+      animation: rotate-out 1.2s;
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+@keyframes rotate-in {
+  0% {
+    opacity: 0;
+    transform: rotateX(180deg);
+  }
+  35% {
+    opacity: 0;
+    transform: rotateX(120deg);
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(1turn);
+  }
+}
+
+@keyframes rotate-out {
+  0% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+  35% {
+    opacity: 1;
+    transform: rotateX(-40deg);
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    transform: rotateX(180deg);
   }
 }
