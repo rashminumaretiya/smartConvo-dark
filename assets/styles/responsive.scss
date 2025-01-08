@@ -139,6 +139,14 @@
   .ask-anything-img{
     right: -5%;
   }
+  .pricing-support-section{
+    .price-r-1{
+      right: -5%;
+    }
+    .price-r-2{
+      right: -5%;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -149,6 +157,20 @@
     .purple-half {
       top: 26%;
       right: -9%;
+    }
+  }
+  .pricing-support-section{
+    .price-l-1{
+      left: -2%;
+    }
+    .price-l-2{
+      left: -2%;
+    }
+    .price-r-1{
+      right: -2%;
+    }
+    .price-r-2{
+      right: -2%;
     }
   }
 }
@@ -301,6 +323,31 @@
           max-width: 100%;
         }
       }
+    }
+  }
+  .pricing-support-section{
+    .wrapper{
+      background-image: none;
+    }
+    .images-wrapper{
+     width: fit-content;
+    }
+    .price-l-1{
+      left: -16%;
+    }
+    .price-l-2{
+      left: -12%;
+    }
+    .price-r-1{
+      right: -24%;
+    }
+    .price-r-2{
+      right: -8%;
+    }
+    .text-section{
+      padding-right: 0;
+      text-align: center;
+      margin-top: 24px;
     }
   }
 }
@@ -548,6 +595,36 @@
       padding: 16px 0;
     }
   }
+  .compare-pricing{
+    padding: 35px 0;
+    .pricing-table{
+      margin-top: 16px;
+      thead{
+        tr{
+          th{
+            &:first-child{
+              padding: 19px 29px;
+            }
+            &:not(:first-child){
+              p{
+                font-size: 20px;
+              }
+            }
+            button{
+              margin-top: 14px;
+            }
+          }
+        }
+      }
+      tbody{
+        tr{
+          td{
+            padding: 18px 8px;
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 480px) {
   h2 {
@@ -582,6 +659,28 @@
           padding: 7px;
         }
       }
+    }
+  }
+  .pricing-support-section{
+    .girl{
+      width: 80vw;
+    }
+    .price-l-1{
+      width: 36vw;
+      left: -2vw;
+      top: 55%;
+    }
+    .price-l-2{
+      width: 36vw;
+      left: 5vw;
+    }
+    .price-r-1{
+      width: 36vw;
+      right: 1vw;
+    }
+    .price-r-2{
+      width: 26vw;
+      right: 1vw;
     }
   }
 }

@@ -9,7 +9,7 @@ $(window).scroll(function () {
 });
 
 $(document).ready(function () {
-
+  if ($(".thumbnail-slider").length > 0){
   // Initialize the thumbnail slider
   $(".thumbnail-slider").slick({
     slidesToShow: 3,
@@ -24,7 +24,7 @@ $(document).ready(function () {
     autoplaySpeed: 2000,
     infinite: true,
   });
-
+  }
   
 });
 
@@ -40,7 +40,7 @@ $(document).ready(function () {
 			scalarY: 5
 		});
   }
-  
+  if(document.getElementsByClassName('testimonial-1').length > 0) {
   var mySwiper = new Swiper ('.testimonial-1', {
     direction: 'vertical',
     effect: 'slide',
@@ -52,6 +52,9 @@ $(document).ready(function () {
         disableOnInteraction: false,
     },
   })
+}
+
+  if(document.getElementsByClassName('ai-platform-slider').length > 0) {
 
   var swiper = new Swiper(".ai-platform-slider", {
     slidesPerView: 6,
@@ -83,6 +86,8 @@ $(document).ready(function () {
       },
     },
   });
+}
+  if(document.getElementsByClassName('swiper1').length > 0) {
 
   const swiper1 = new Swiper('.swiper1', {
     direction: 'vertical',
@@ -105,7 +110,9 @@ $(document).ready(function () {
        }
     },
   });
+}
   
+  if(document.getElementsByClassName('swiper2').length > 0) {
   const swiper2 = new Swiper('.swiper2', {
     direction: 'vertical',
     loop: true,
@@ -129,29 +136,32 @@ $(document).ready(function () {
        }
     },
   });
+}
   
-  const swiper3 = new Swiper('.swiper3', {
-    direction: 'vertical',
-    loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: 40,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    speed: 5000,
-    breakpoints: {
-      0: {
-        spaceBetween: 20,
-       },
-       767: {
-         spaceBetween: 30,
-       },
-       1199: {
-         spaceBetween: 40,
-       }
-    },
-  });
+  if(document.getElementsByClassName('swiper3').length > 0) {
+    const swiper3 = new Swiper('.swiper3', {
+      direction: 'vertical',
+      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 40,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      speed: 5000,
+      breakpoints: {
+        0: {
+          spaceBetween: 20,
+         },
+         767: {
+           spaceBetween: 30,
+         },
+         1199: {
+           spaceBetween: 40,
+         }
+      },
+    });
+  }
   
 
   jQuery(document).ready(function($){
@@ -282,3 +292,25 @@ $(document).ready(function () {
       $newWord.removeClass('is-hidden').addClass('is-visible');
     }
   });
+
+  document.querySelectorAll('.pricing-table tbody td, .pricing-table thead th').forEach((td) => {
+    td.addEventListener('mouseover', function () {
+        const colIndex = Array.from(this.parentElement.children).indexOf(this) + 1;
+        const col = document.querySelector(`col[data-index="${colIndex}"]`);
+        const th = Array.from(document.querySelectorAll(`th`));
+        if (col && th) {
+            col.classList.add('highlight');
+            th[colIndex -1].classList.add('highlight');
+        }
+    });
+
+    td.addEventListener('mouseout', function () {
+        const colIndex = Array.from(this.parentElement.children).indexOf(this) + 1;
+        const col = document.querySelector(`col[data-index="${colIndex}"]`);
+        const th = Array.from(document.querySelectorAll(`th`));
+        if (col && th) {
+            col.classList.remove('highlight');
+            th[colIndex -1].classList.remove('highlight');
+        }
+    });
+});
