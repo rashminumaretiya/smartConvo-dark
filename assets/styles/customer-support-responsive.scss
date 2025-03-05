@@ -1,0 +1,149 @@
+@media screen and (max-width:1440px) {
+  .customer-support-hero-section {
+    h1{
+      font-size: 60px;
+    }
+  }
+}
+@media screen and (max-width:991px) {
+  .customer-support-hero-section {
+    padding: 60px 0 80px;
+    h1{
+      font-size: 42px;
+    }
+    .hero-img{
+      margin-top: 0;
+    }
+    .circle-main{
+      width: 480px;
+      top: -20%;
+      right: -8%;
+      height: 480px;
+      max-width: 480px;
+      max-height: 480px;
+    }
+  }
+  .customer-challenge .challenge-card{
+    .img-wrapper{
+      padding: 20px;
+      max-height: 300px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .customer-support-section{
+    .pdf-img{
+      left: 10%;
+    }
+    .txt-img{
+      right: 4%;
+      bottom: 4%;
+    }
+  }
+}
+@media screen and (max-width:767px) {
+  .customer-support-hero-section {
+    h1{
+      font-size: 36px;
+    }
+  }
+  .number-tabs-content{
+    padding-top: 40px;
+    .content{
+      padding: 0 12px 24px 12px;
+    }
+    .desc{
+      p{
+        font-size: 14px;
+      }
+      h6{
+        font-size: 18px;
+      }
+    }
+  }
+  .workflow-section{
+    .cards-wrapper{
+      &::before{
+        display: none;
+      }
+      .content{
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  } 
+}
+@media screen and (max-width:575px) {
+  .customer-support-hero-section {
+    padding: 50px 0;
+    h1{
+      font-size: 32px;
+    }
+    .label.resolved,
+    .label.reported{
+      display: none !important;
+    }
+    .circle-main{
+      top: -30%;
+      right: -18%;
+    }
+  }
+  .customer-challenge{
+    .top-vector, .bottom-vector{
+      display: none !important;
+    }
+    .challenge-card .content{
+      h6{
+        font-size: 16px;
+      }
+      p{
+        font-size: 14px;
+      }
+    } 
+  }
+  .improve-challenge-section{
+    padding: 50px 0;
+    .improve-card{
+      padding: 16px;
+      h6{
+        font-size: 18px;
+      }
+    }
+  }
+  .number-tabs{
+    .nav-link{
+      min-width: 200px;
+      p{
+        font-size: 14px;
+      }
+      .num{
+        height: 40px;
+        width: 40px;
+        &::after{
+          height: 42px;
+          width: 42px;
+        }
+      }
+    }
+  }
+  .customer-support-section{
+    background: radial-gradient(103.16% 19.2% at 47% 100%, #1558D4 -10%, rgba(12, 14, 25, 0.332609) 45.8%, rgba(12, 14, 25, 0.2) 100%);
+    .pdf-img{
+      left: 0%;
+      top: 0;
+    }
+    .txt-img{
+      right: 0%;
+      bottom: 0;
+    }
+  }
+}
+@media screen and (max-width:425px) {
+  .customer-support-hero-section {
+    h1{
+      font-size: 28px;
+    }
+  }
+}

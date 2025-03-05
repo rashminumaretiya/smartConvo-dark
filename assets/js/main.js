@@ -314,3 +314,33 @@ $(document).ready(function () {
         }
     });
 });
+
+// CUSTOMER SUPPORT SLIDER
+
+if(document.getElementsByClassName('challenge-slider').length > 0) {
+
+  var swiper = new Swiper(".challenge-slider", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+    autoplay: {
+      delay: 3000
+    },
+    loop: true, 
+      nextEl: ".next-arrow",
+      prevEl: ".prev-arrow",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1.3,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+      1119: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
